@@ -1,5 +1,6 @@
 from requests import Session
 
+
 class TrueNASBase(Session):
 
     def __init__(self, api_key, host, api_version='2.0', verify=False, *args, **kwargs):
