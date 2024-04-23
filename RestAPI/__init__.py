@@ -6,6 +6,8 @@ from RestAPI.APISections.Alerts import Alerts
 from RestAPI.APISections.ApiKey import ApiKey
 from RestAPI.APISections.Auth import Auth
 from RestAPI.APISections.TwoFactor import TwoFactor
+from RestAPI.APISections.BootPool import BootPool
+from RestAPI.APISections.BootEnv import BootEnv
 
 
 class TrueNAS(TrueNASBase):
@@ -19,3 +21,5 @@ class TrueNAS(TrueNASBase):
         self.api_key = ApiKey(self)
         self.authentication = Auth(self)
         self.two_factor = TwoFactor(self)
+        self.boot_pool = BootPool(self)
+        self.boot_env = BootEnv(self)
