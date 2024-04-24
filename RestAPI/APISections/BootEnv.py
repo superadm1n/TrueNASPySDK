@@ -10,7 +10,7 @@ class BootEnv(BaseSection):
         :param params:
         :return:
         '''
-        return self.session.get('/bootenv', json=params).json()
+        return self.session.get('/bootenv', json=params)
 
     def create_env(self, name, source):
         '''
@@ -23,7 +23,7 @@ class BootEnv(BaseSection):
         :param source:
         :return:
         '''
-        return self.session.post('/bootenv', json={'name': name, 'source': source}).json()
+        return self.session.post('/bootenv', json={'name': name, 'source': source})
 
     def delete_env(self, id):
         '''
@@ -32,7 +32,7 @@ class BootEnv(BaseSection):
         :param id:
         :return:
         '''
-        return self.session.delete(f'/bootenv/id/{id}').json()
+        return self.session.delete(f'/bootenv/id/{id}')
 
     def get_env(self, id, **params):
         '''
@@ -42,7 +42,7 @@ class BootEnv(BaseSection):
         :param params:
         :return:
         '''
-        return self.session.get(f'/bootenv/id/{id}', json=params).json()
+        return self.session.get(f'/bootenv/id/{id}', json=params)
 
     def update_env(self, id, name):
         '''
@@ -52,7 +52,7 @@ class BootEnv(BaseSection):
         :param name:
         :return:
         '''
-        return self.session.put(f'/bootenv/id/{id}', json={'name': name}).json()
+        return self.session.put(f'/bootenv/id/{id}', json={'name': name})
 
     def activate_env(self, id):
         '''
@@ -61,7 +61,7 @@ class BootEnv(BaseSection):
         :param id:
         :return:
         '''
-        return self.session.post(f'/bootenv/id/{id}/activate').json()
+        return self.session.post(f'/bootenv/id/{id}/activate')
 
     def set_attribute(self, id, keep):
         '''
@@ -71,7 +71,7 @@ class BootEnv(BaseSection):
         :param keep:
         :return:
         '''
-        return self.session.post(f'/bootenv/id/{id}/ste_attribute', json={'keep': keep}).json()
+        return self.session.post(f'/bootenv/id/{id}/ste_attribute', json={'keep': keep})
 
 
 

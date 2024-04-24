@@ -34,16 +34,16 @@ class TrueNASBase(Session):
 
     @construct_url
     def get(self, *args, **kwargs):
-        return super().get(*args, **kwargs)
+        return super().get(*args, **kwargs).json()
 
     @construct_url
     def put(self, *args, **kwargs):
-        return super().get(*args, **kwargs)
+        return super().get(*args, **kwargs).json()
 
     @construct_url
     def delete(self, *args, **kwargs):
-        return super().delete(*args, **kwargs)
+        return super().delete(*args, **kwargs).json()
 
     @construct_url
     def post(self, *args, **kwargs):
-        return super().post(*args, **kwargs)
+        return super().post(*args, **kwargs).json()

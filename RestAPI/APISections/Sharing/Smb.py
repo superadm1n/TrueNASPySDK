@@ -5,11 +5,11 @@ class Smb(BaseSection):
 
     @property
     def all_shares(self):
-        return self.session.get('/sharing/smb').json()
+        return self.session.get('/sharing/smb')
 
     @property
     def presets(self):
-        return self.session.get('/sharing/smb/presets').json()
+        return self.session.get('/sharing/smb/presets')
 
     def create_share(self, params):
 

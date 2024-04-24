@@ -5,11 +5,11 @@ class Nfs(BaseSection):
 
     @property
     def all_shares(self):
-        return self.session.get('/sharing/nfs').json()
+        return self.session.get('/sharing/nfs')
 
     @property
     def human_identifier(self):
-        return self.session.get('/sharing/nfs/human_identifier').json()
+        return self.session.get('/sharing/nfs/human_identifier')
 
     def create_share(self, params):
         pass
@@ -18,7 +18,7 @@ class Nfs(BaseSection):
         pass
 
     def get_share(self, id):
-        return self.session.get(f'/sharing/nfs/id/{id}').json()
+        return self.session.get(f'/sharing/nfs/id/{id}')
 
     def update_share(self, id):
         pass
