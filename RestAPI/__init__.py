@@ -11,6 +11,9 @@ from RestAPI.APISections.BootEnv import BootEnv
 from RestAPI.APISections.Certificate import Certificate
 from RestAPI.APISections.CertificateAuthority import CertificateAuthority
 from RestAPI.APISections.CloudSync import CloudSync
+from RestAPI.APISections.CloudSyncCreds import CloudSyncCreds
+from RestAPI.APISections.Config import Config
+from RestAPI.APISections.CronJob import CronJob
 
 
 class TrueNAS(TrueNASBase):
@@ -29,3 +32,8 @@ class TrueNAS(TrueNASBase):
         self.certificate = Certificate(self)
         self.certificate_authority = CertificateAuthority(self)
         self.cloudsync = CloudSync(self)
+        self.cloudsync_creds = CloudSyncCreds(self)
+        self.config = Config(self)
+        self.cronjob = CronJob(self)
+
+
