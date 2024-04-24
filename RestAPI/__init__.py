@@ -10,6 +10,7 @@ from RestAPI.APISections.BootPool import BootPool
 from RestAPI.APISections.BootEnv import BootEnv
 from RestAPI.APISections.Certificate import Certificate
 from RestAPI.APISections.CertificateAuthority import CertificateAuthority
+from RestAPI.APISections.CloudSync import CloudSync
 
 
 class TrueNAS(TrueNASBase):
@@ -27,3 +28,4 @@ class TrueNAS(TrueNASBase):
         self.boot_env = BootEnv(self)
         self.certificate = Certificate(self)
         self.certificate_authority = CertificateAuthority(self)
+        self.cloudsync = CloudSync(self)
