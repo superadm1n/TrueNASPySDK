@@ -8,6 +8,8 @@ from RestAPI.APISections.Auth import Auth
 from RestAPI.APISections.TwoFactor import TwoFactor
 from RestAPI.APISections.BootPool import BootPool
 from RestAPI.APISections.BootEnv import BootEnv
+from RestAPI.APISections.Certificate import Certificate
+from RestAPI.APISections.CertificateAuthority import CertificateAuthority
 
 
 class TrueNAS(TrueNASBase):
@@ -23,3 +25,5 @@ class TrueNAS(TrueNASBase):
         self.two_factor = TwoFactor(self)
         self.boot_pool = BootPool(self)
         self.boot_env = BootEnv(self)
+        self.certificate = Certificate(self)
+        self.certificate_authority = CertificateAuthority(self)
